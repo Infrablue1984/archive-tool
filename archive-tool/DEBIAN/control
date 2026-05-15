@@ -1,0 +1,8 @@
+Package: archive-tool
+Version: 1.0
+Section: utils
+Priority: optional
+Architecture: all
+Maintainer: Inga Franzen <kontakt@ingafranzen.de>
+Depends: python3
+Description: Python Tool zur Archvierung von Dateien und Ordnern einer definierten Benutzergruppe.

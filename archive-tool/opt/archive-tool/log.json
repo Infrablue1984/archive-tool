@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "formatters": {
+    "file_formatter": {
+      "format": "%(asctime)s | %(levelname)s | PID %(process)d | %(message)s",
+      "datefmt": "%Y-%m-%d %H:%M"
+    },
+    "stream_formatter": {
+      "format": "%(levelname)s | PID %(process)d | %(message)s"
+    }
+  },
+  "handlers": {
+    "file_handler": {
+      "formatter": "file_formatter",
+      "class": "logging.FileHandler",
+      "filename": "/var/log/file_archiver.log",
+      "mode": "a",
+      "level": "INFO"
+    },
+    "stream_handler": {
+      "formatter": "stream_formatter",
+      "class": "logging.StreamHandler",
+      "level": "INFO"
+
+    }
+  },
+  "loggers": {
+    "archive_logger": {
+      "level": "INFO",
+      "handlers": ["file_handler", "stream_handler"]
+    }
+  }
+}
